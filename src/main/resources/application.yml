@@ -1,0 +1,7 @@
+spring:
+  batch:
+    job:
+      enabled: false # 서버 재시작시 배치 자동실행 방지
+  datasource: # batch를 사용하기 위해 h2 database 사용
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:test;DB_CLOSE_DELAY=-1;
