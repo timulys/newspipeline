@@ -28,7 +28,7 @@ import java.util.List;
 @Component
 @RequiredArgsConstructor
 public class LandCrawler {
-	private static final String LANDNEWS = "https://realestate.daum.net/news/all";
+	private static final String LANDNEWS = "";
 
 	public List<News> getLandNews() {
 		List<News> landNewsList = new ArrayList<>();

@@ -35,10 +35,10 @@ import java.util.List;
 public class TelegramSendService {
 	private static final EcoCrawler ecoCrawler = new EcoCrawler();
 	private static final LandCrawler landCrawler = new LandCrawler();
-	private static final String ECO_TOKEN = "6221913525:AAGktnB0Jq6avhm90plK_66EtjouKOY5Tx8";
-	private static final String LAND_TOKEN = "6221913525:AAGktnB0Jq6avhm90plK_66EtjouKOY5Tx8";
-	private static final String ECO_CHAT_ID = "1086324779";
-	private static final String LAND_CHAT_ID = "1086324779";
+	private static final String ECO_TOKEN = "";
+	private static final String LAND_TOKEN = "";
+	private static final String ECO_CHAT_ID = "";
+	private static final String LAND_CHAT_ID = "";
 
 	public void send() {
 		// 부동산 뉴스 묶음 전송

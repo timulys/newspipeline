@@ -28,7 +28,7 @@ import java.util.List;
 @Slf4j
 @Component
 public class EcoCrawler {
-	private static final String ECONEWS = "https://news.daum.net/breakingnews/economic";
+	private static final String ECONEWS = "";
 
 	public List<News> getEcoNews() {
 		List<News> ecoNewsList = new ArrayList<>();
