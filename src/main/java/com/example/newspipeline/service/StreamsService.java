@@ -36,5 +36,4 @@ public class StreamsService {
 			System.out.println("News ID = [" + news.type() + "] " + news.newsId());
 		});
 	}
-
 }
