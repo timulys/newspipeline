@@ -1,5 +1,6 @@
 package com.example.newspipeline.config;
 
+import com.example.newspipeline.service.StreamsService;
 import com.example.newspipeline.tasklet.CrawlingTasklet;
 import com.example.newspipeline.service.TelegramSendService;
 import lombok.RequiredArgsConstructor;
@@ -43,6 +44,9 @@ public class JobConfiguration {
 	private final JobLauncher jobLauncher;
 	private final JobRegistry jobRegistry;
 
+	private final TelegramSendService telegramSendService;
+	private final StreamsService streamsService;
+
 	@Bean
 	public Job sendNewsJob() {
 		return new JobBuilder("sendNewsJob", jobRepository)
@@ -52,7 +56,8 @@ public class JobConfiguration {
 
 	private Step crawlingStep(JobRepository jobRepository, PlatformTransactionManager platformTransactionManager) {
 		return new StepBuilder("sendNewsStep", jobRepository)
-			.tasklet(new CrawlingTasklet(new TelegramSendService()), platformTransactionManager)
+			.tasklet(new CrawlingTasklet(telegramSendService, streamsService), platformTransactionManager)
+//			.tasklet(new CrawlingTasklet(new TelegramSendService()), platformTransactionManager)
 			.build();
 	}
 
@@ -63,7 +68,7 @@ public class JobConfiguration {
 		return jobProcessor;
 	}
 
-	@Scheduled(fixedDelay = 60 * 3000L) // 3분마다
+	@Scheduled(fixedDelay = 60 * 1000L) // 1분마다(대량의 데이터를 만들기 위해서)
 	public void runJob() {
 		try {
 			jobLauncher.run(jobRegistry.getJob("sendNewsJob"), new JobParametersBuilder().addString("datetime", LocalDateTime.now().toString()).toJobParameters());

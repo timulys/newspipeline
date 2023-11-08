@@ -26,6 +26,22 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
+        <!-- Kafka를 사용하기 위한 Library 추가 -->
+        <dependency>
+            <groupId>org.springframework.kafka</groupId>
+            <artifactId>spring-kafka</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.kafka</groupId>
+            <artifactId>kafka-streams</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-stream-binder-kafka-streams</artifactId>
+            <version>4.0.4</version>
+        </dependency>
+        <!-- Kafka를 사용하기 위한 Library 추가 -->
+
         <dependency>
             <groupId>org.jsoup</groupId>
             <artifactId>jsoup</artifactId>

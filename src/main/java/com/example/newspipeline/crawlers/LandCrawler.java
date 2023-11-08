@@ -28,9 +28,7 @@ import java.util.List;
 @Component
 @RequiredArgsConstructor
 public class LandCrawler {
-	private static final String LANDNEWS = "";
-	// 마지막 뉴스 이후 기사만 가져오기 위한 NewsId;
-	private static Long LAST_LAND_NEWS_ID = 0L;
+	private static final String LANDNEWS = "https://realestate.daum.net/news/all";
 
 	public List<News> getLandNews() {
 		List<News> landNewsList = new ArrayList<>();

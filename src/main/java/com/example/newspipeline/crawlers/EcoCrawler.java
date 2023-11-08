@@ -2,6 +2,7 @@ package com.example.newspipeline.crawlers;
 
 import com.example.newspipeline.domain.News;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.jsoup.Jsoup;
@@ -26,11 +27,8 @@ import java.util.List;
  */
 @Slf4j
 @Component
-@RequiredArgsConstructor
 public class EcoCrawler {
-	private static final String ECONEWS = "";
-	// 마지막 뉴스 이후 기사만 가져오기 위한 NewsId;
-	private static Long LAST_ECO_NEWS_ID = 0L;
+	private static final String ECONEWS = "https://news.daum.net/breakingnews/economic";
 
 	public List<News> getEcoNews() {
 		List<News> ecoNewsList = new ArrayList<>();

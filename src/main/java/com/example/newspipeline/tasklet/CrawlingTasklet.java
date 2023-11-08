@@ -1,5 +1,6 @@
 package com.example.newspipeline.tasklet;
 
+import com.example.newspipeline.service.StreamsService;
 import com.example.newspipeline.service.TelegramSendService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -23,11 +24,14 @@ import org.springframework.batch.repeat.RepeatStatus;
 @RequiredArgsConstructor
 public class CrawlingTasklet implements Tasklet {
 	private final TelegramSendService telegramSendService;
+	private final StreamsService streamsService;
 
 	@Override
 	public RepeatStatus execute(StepContribution contribution, ChunkContext chunkContext) throws Exception {
 		log.debug("executed tasklet");
-		telegramSendService.send(); // Send 비즈니스 수행
+		// Kafka 테스트를 위해 잠시 주석
+		streamsService.crawl();
+//		telegramSendService.send(); // Send 비즈니스 수행
 		return RepeatStatus.FINISHED;
 	}
 }

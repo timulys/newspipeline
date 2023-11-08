@@ -1,3 +1,29 @@
+# Spring Cloud Kafka Streams 설정
+spring.cloud:
+  function:
+    definition: ecoService;landService
+  stream:
+    bindings:
+      ecoService-in-0:
+        destination: eco-news
+      landService-in-0:
+        destination: land-news
+    kafka:
+      bindings:
+        ecoService-in-0:
+          consumer:
+            configuration:
+              value:
+                deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+        landService-in-0:
+          consumer:
+            configuration:
+              value:
+                deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      binder:
+        brokers:
+          - localhost:9092
+
 spring:
   batch:
     job:
