@@ -1,4 +1,4 @@
-package com.example.newspipeline.crawlers;
+package com.example.newspipeline.utils.crawlers;
 
 import com.example.newspipeline.domain.News;
 import lombok.extern.slf4j.Slf4j;
@@ -24,7 +24,7 @@ import java.util.List;
 @Slf4j
 @Component
 public class EcoCrawler {
-	private static final String ECONEWS = "";
+	private static final String ECONEWS = "https://news.daum.net/breakingnews/economic";
 
 	public List<News> getEcoNews() {
 		List<News> ecoNewsList = new ArrayList<>();

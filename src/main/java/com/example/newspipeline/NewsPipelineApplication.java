@@ -5,10 +5,12 @@ import com.example.newspipeline.config.topology.TopologyBuilder;
 import org.apache.kafka.streams.KafkaStreams;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
 @SpringBootApplication
 @EnableScheduling
+//@EnableMongoRepositories
 public class NewsPipelineApplication {
 
 	public static void main(String[] args) {

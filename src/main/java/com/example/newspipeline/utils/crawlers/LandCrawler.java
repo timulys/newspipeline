@@ -1,4 +1,4 @@
-package com.example.newspipeline.crawlers;
+package com.example.newspipeline.utils.crawlers;
 
 import com.example.newspipeline.domain.News;
 import lombok.RequiredArgsConstructor;
@@ -26,7 +26,7 @@ import java.util.List;
 @Component
 @RequiredArgsConstructor
 public class LandCrawler {
-	private static final String LANDNEWS = "";
+	private static final String LANDNEWS = "https://realestate.daum.net/news/all";
 
 	public List<News> getLandNews() {
 		List<News> landNewsList = new ArrayList<>();

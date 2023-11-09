@@ -1,7 +1,7 @@
 package com.example.newspipeline.service;
 
-import com.example.newspipeline.crawlers.EcoCrawler;
-import com.example.newspipeline.crawlers.LandCrawler;
+import com.example.newspipeline.utils.crawlers.EcoCrawler;
+import com.example.newspipeline.utils.crawlers.LandCrawler;
 import com.example.newspipeline.domain.News;
 import com.example.newspipeline.enums.TopicEnum;
 import lombok.RequiredArgsConstructor;

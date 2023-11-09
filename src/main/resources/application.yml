@@ -31,3 +31,12 @@ spring:
   datasource: # batch를 사용하기 위해 h2 database 사용
     driver-class-name: org.h2.Driver
     url: jdbc:h2:mem:test;DB_CLOSE_DELAY=-1;
+
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      authentication-database: admin
+      username: root
+      password: root
+      database: news
