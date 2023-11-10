@@ -21,7 +21,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
  */
 @Getter
 @Document(collection = "eco")
-@AllArgsConstructor
+@AllArgsConstructor(access = AccessLevel.PRIVATE)
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class EcoNews {
 	@Id

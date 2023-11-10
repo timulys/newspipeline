@@ -20,7 +20,7 @@ public class MongoQueryUtil {
 	 * with Sort and limit 10
 	 * @return
 	 */
-	public static Query deafultSort(int limit) {
+	public static Query defaultSearch(int limit) {
 		Query query = new Query();
 		query.with(Sort.by(Sort.Direction.DESC, "newsId")).limit(limit);
 		return query;

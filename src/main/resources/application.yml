@@ -1,3 +1,7 @@
+crawling:
+  econews: 뉴스URL(편집하세요)
+  landnews: 뉴스URL(편집하세요)
+
 # Spring Cloud Kafka Streams 설정
 spring.cloud:
   function:
@@ -40,3 +44,4 @@ spring:
       username: root
       password: root
       database: news
+

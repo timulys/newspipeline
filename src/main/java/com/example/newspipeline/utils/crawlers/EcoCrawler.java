@@ -5,6 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -24,7 +25,8 @@ import java.util.List;
 @Slf4j
 @Component
 public class EcoCrawler {
-	private static final String ECONEWS = "https://news.daum.net/breakingnews/economic";
+	@Value("${crawling.econews}")
+	private String ECONEWS;
 
 	public List<News> getEcoNews() {
 		List<News> ecoNewsList = new ArrayList<>();

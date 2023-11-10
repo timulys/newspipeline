@@ -5,10 +5,7 @@ import com.example.newspipeline.domain.News;
 import com.example.newspipeline.repository.EcoNewsRepository;
 import com.example.newspipeline.utils.MongoQueryUtil;
 import lombok.RequiredArgsConstructor;
-import org.springframework.data.domain.Sort;
 import org.springframework.data.mongodb.core.MongoTemplate;
-import org.springframework.data.mongodb.core.aggregation.Aggregation;
-import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -37,6 +34,6 @@ public class EcoNewsServiceImpl implements EcoNewsService {
 
 	@Override
 	public List<EcoNews> findAll() {
-		return mongoTemplate.find(MongoQueryUtil.deafultSort(100), EcoNews.class);
+		return mongoTemplate.find(MongoQueryUtil.defaultSearch(100), EcoNews.class);
 	}
 }

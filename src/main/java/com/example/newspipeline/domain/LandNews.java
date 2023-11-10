@@ -1,6 +1,5 @@
 package com.example.newspipeline.domain;
 
-import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -21,9 +20,8 @@ import org.springframework.data.mongodb.core.mapping.Document;
  */
 @Getter
 @Document(collection = "land")
-@AllArgsConstructor
+@AllArgsConstructor(access = AccessLevel.PRIVATE)
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
-@JsonInclude(value = JsonInclude.Include.NON_NULL)
 public class LandNews {
 	@Id
 	private Long newsId;

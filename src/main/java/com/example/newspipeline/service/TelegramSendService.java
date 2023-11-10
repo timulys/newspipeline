@@ -29,12 +29,12 @@ import java.util.List;
 @Service
 @RequiredArgsConstructor
 public class TelegramSendService {
-	private static final EcoCrawler ecoCrawler = new EcoCrawler();
-	private static final LandCrawler landCrawler = new LandCrawler();
-	private static final String ECO_TOKEN = "";
-	private static final String LAND_TOKEN = "";
-	private static final String ECO_CHAT_ID = "";
-	private static final String LAND_CHAT_ID = "";
+	private final EcoCrawler ecoCrawler;
+	private final LandCrawler landCrawler;
+	private final String ECO_TOKEN = "";
+	private final String LAND_TOKEN = "";
+	private final String ECO_CHAT_ID = "";
+	private final String LAND_CHAT_ID = "";
 
 	public void send() {
 		// 부동산 뉴스 묶음 전송

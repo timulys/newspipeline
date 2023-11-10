@@ -6,6 +6,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -26,7 +27,8 @@ import java.util.List;
 @Component
 @RequiredArgsConstructor
 public class LandCrawler {
-	private static final String LANDNEWS = "https://realestate.daum.net/news/all";
+	@Value("${crawling.landnews}")
+	private String LANDNEWS;
 
 	public List<News> getLandNews() {
 		List<News> landNewsList = new ArrayList<>();

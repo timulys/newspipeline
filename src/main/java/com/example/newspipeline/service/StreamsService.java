@@ -25,8 +25,8 @@ import java.util.List;
 @RequiredArgsConstructor
 public class StreamsService {
 	private final KafkaTemplate<Long, News> kafkaTemplate;
-	private static final EcoCrawler ecoCrawler = new EcoCrawler();
-	private static final LandCrawler landCrawler = new LandCrawler();
+	private final EcoCrawler ecoCrawler;
+	private final LandCrawler landCrawler;
 
 	public void crawl() {
 		List<News> newsList = ecoCrawler.getEcoNews();
