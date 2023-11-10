@@ -50,6 +50,14 @@
         </dependency>
         <!-- MongoDB를 사용하기 위한 라이브러리 추가 -->
 
+        <!-- Thymeleaf 사용을 위한 라이브러리 추가 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+            <version>3.1.5</version>
+        </dependency>
+        <!-- Thymeleaf 사용을 위한 라이브러리 추가 -->
+
         <!-- Crawling을 위한 jsoup 라이브러리 추가 -->
         <dependency>
             <groupId>org.jsoup</groupId>

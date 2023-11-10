@@ -1,0 +1,59 @@
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Crawling News Platform</title>
+    <style>
+        /*div {*/
+        /*    with: 100%;*/
+        /*    height: 100%;*/
+        /*}*/
+        div.left {
+            width: 50%;
+            height: 100%;
+            float: left;
+            box-sizing: border-box;
+            border-right: 1px solid black;
+        }
+        div.right {
+            width: 50%;
+            height: 100%;
+            float: right;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+<script type="text/javascript" src="/js/index.js"></script>
+    <div class="left">
+        <div>
+            <h3>Economy News List</h3>
+            <input type="button" value="경제Start" onclick="ecoStart()">
+            <input type="button" value="경제Stop" onclick="ecoStop()">
+        </div>
+        <hr/>
+        <div id="contentEcoBody">
+            <ul th:each="news : ${newsList}">
+                <li th:text="${news.title}"></li>
+            </ul>
+        </div>
+    </div>
+    <div class="right">
+        <div>
+            <h3>Land News List</h3>
+            <input type="button" value="부동산Start" onclick="landStart()">
+            <input type="button" value="부동산Stop" onclick="landStop()">
+        </div>
+        <hr/>
+        <div id="contentLandBody">
+            <ul th:each="news : ${newsList}">
+                <li th:text="${news.title}"></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

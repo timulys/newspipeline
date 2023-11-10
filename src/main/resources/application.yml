@@ -1,6 +1,6 @@
 crawling:
-  econews: 뉴스URL(편집하세요)
-  landnews: 뉴스URL(편집하세요)
+  econews: https://news.daum.net/breakingnews/economic
+  landnews: https://realestate.daum.net/news/all
 
 # Spring Cloud Kafka Streams 설정
 spring.cloud:
