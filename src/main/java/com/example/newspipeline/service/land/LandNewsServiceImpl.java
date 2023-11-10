@@ -34,6 +34,6 @@ public class LandNewsServiceImpl implements LandNewsService {
 
 	@Override
 	public List<LandNews> findAll() {
-		return mongoTemplate.find(MongoQueryUtil.defaultSearch(50), LandNews.class);
+		return mongoTemplate.find(MongoQueryUtil.defaultSearch(100), LandNews.class);
 	}
 }

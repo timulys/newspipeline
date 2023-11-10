@@ -3,10 +3,14 @@ var ecoTimerID;
 var landTimerID;
 
 function ecoStart() {
+    $("#ecoStart").attr("disabled", true);
+    $("#ecoStop").attr("disabled", false);
     ecoSearch();
 }
 
 function ecoStop() {
+    $("#ecoStart").attr("disabled", false);
+    $("#ecoStop").attr("disabled", true);
     clearTimeout(ecoTimerID);
     $("#contentEcoBody").empty();
 }
@@ -29,10 +33,14 @@ function ecoSearch() {
 }
 
 function landStart() {
+    $("#landStart").attr("disabled", true);
+    $("#landStop").attr("disabled", false);
     landSearch();
 }
 
 function landStop() {
+    $("#landStart").attr("disabled", false);
+    $("#landStop").attr("disabled", true);
     clearTimeout(landTimerID);
     $("#contentLandBody").empty();
 }
@@ -51,5 +59,5 @@ function landSearch() {
             $("#contentLandBody").append("<br/>");
         });
     })
-    landTimerID = setTimeout("ecoSearch()", 10000);// 10초 단위로 갱신 처리
+    landTimerID = setTimeout("landSearch()", 10000);// 10초 단위로 갱신 처리
 }
