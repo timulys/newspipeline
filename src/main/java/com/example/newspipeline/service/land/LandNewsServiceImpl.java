@@ -7,6 +7,7 @@ import com.example.newspipeline.utils.MongoQueryUtil;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -28,11 +29,13 @@ public class LandNewsServiceImpl implements LandNewsService {
 	private final LandNewsRepository landNewsRepository;
 
 	@Override
+	@Transactional
 	public void saveLandNews(News news) {
 		landNewsRepository.save(LandNews.of(news));
 	}
 
 	@Override
+	@Transactional(readOnly = true)
 	public List<LandNews> findAll() {
 		return mongoTemplate.find(MongoQueryUtil.defaultSearch(100), LandNews.class);
 	}
