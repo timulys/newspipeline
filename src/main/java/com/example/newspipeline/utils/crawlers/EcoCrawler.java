@@ -46,7 +46,7 @@ public class EcoCrawler {
 					title = elements.get(i).childNode(1).childNode(1).unwrap().toString();
 				}
 				Long newsId = Long.valueOf(url.substring(url.lastIndexOf("/") + 1));
-				News ecoNews = new News("eco", url, title, newsId);
+				News ecoNews = new News("eco", url, title, newsId, newsId, "");
 				ecoNewsList.add(ecoNews);
 			}
 		} catch (Exception e) {

@@ -19,6 +19,7 @@ import java.util.List;
  * Description 	:
  * ======================================================
  * DATE				    AUTHOR				NOTICE
+ *
  * ======================================================
  * 2023-11-09			jhchoi				최초 생성
  */
@@ -27,6 +28,7 @@ import java.util.List;
 public class EcoNewsServiceImpl implements EcoNewsService {
 	private final MongoTemplate mongoTemplate;
 	private final EcoNewsRepository ecoNewsRepository;
+
 
 	@Override
 	@Transactional
@@ -39,4 +41,5 @@ public class EcoNewsServiceImpl implements EcoNewsService {
 	public List<EcoNews> findAll() {
 		return mongoTemplate.find(MongoQueryUtil.defaultSearch(100), EcoNews.class);
 	}
+
 }

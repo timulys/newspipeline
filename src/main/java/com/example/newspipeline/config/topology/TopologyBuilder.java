@@ -2,6 +2,7 @@ package com.example.newspipeline.config.topology;
 
 import com.example.newspipeline.domain.News;
 import com.example.newspipeline.enums.TopicEnum;
+import lombok.RequiredArgsConstructor;
 import org.apache.kafka.common.serialization.Serdes;
 import org.apache.kafka.streams.StreamsBuilder;
 import org.apache.kafka.streams.Topology;
@@ -21,6 +22,7 @@ import org.springframework.kafka.support.serializer.JsonSerde;
  * ======================================================
  * 2023-11-07			jhchoi				최초 생성
  */
+@RequiredArgsConstructor
 public class TopologyBuilder {
 	// 마지막 경제 뉴스 ID
 	private static Long LAST_ECO_NEWS_ID = 0L;

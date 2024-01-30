@@ -27,8 +27,10 @@ public class LandNews {
 	private Long newsId;
 	private String url;
 	private String title;
+	private Long newsDate;
+	private String summary;
 
 	public static LandNews of(News news) {
-		return new LandNews(news.newsId(), news.url(), news.title());
+		return new LandNews(news.newsId(), news.url(), news.title(), news.newsDate(), news.summary());
 	}
 }

@@ -40,9 +40,9 @@ import java.time.LocalDateTime;
 @RequiredArgsConstructor
 public class JobConfiguration {
 	private final JobRepository jobRepository;
-	private final PlatformTransactionManager platformTransactionManager;
 	private final JobLauncher jobLauncher;
 	private final JobRegistry jobRegistry;
+	private final PlatformTransactionManager platformTransactionManager;
 
 	private final TelegramSendService telegramSendService;
 	private final StreamsService streamsService;

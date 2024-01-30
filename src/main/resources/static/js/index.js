@@ -1,4 +1,4 @@
-var origin = "http://localhost:8080/news/";
+var origin = "http://10.160.1.223:8080/news/";
 var ecoTimerID;
 var landTimerID;
 
@@ -33,6 +33,8 @@ function ecoSearch() {
 }
 
 function landStart() {
+
+
     $("#landStart").attr("disabled", true);
     $("#landStop").attr("disabled", false);
     landSearch();
@@ -45,6 +47,7 @@ function landStop() {
     $("#contentLandBody").empty();
 }
 
+
 function landSearch() {
     var url = origin + "land-all";
     $.ajax({
@@ -53,7 +56,8 @@ function landSearch() {
     }).then(newsList => {
         $("#contentLandBody").empty();
         $("#contentLandBody").append();
-        $.each(newsList, function(index, news) {
+        $.each(newsList, function(index, news)
+        {
             $("#contentLandBody").append((index + 1) + ". " + news.title);
             $("#contentLandBody").append(" <a href='" + news.url + "' target='_blank'>[" + news.newsId + "]</a>");
             $("#contentLandBody").append("<br/>");

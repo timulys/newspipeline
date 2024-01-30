@@ -40,7 +40,7 @@ public class LandCrawler {
 				String url = "https:" + elements.get(i).childNode(3).childNode(1).attr("href");
 				String title = elements.get(i).childNode(1).childNode(1).unwrap().toString();
 				Long newsId = Long.valueOf(url.substring(url.lastIndexOf("/") + 1));
-				News landNews = new News("land", url, title, newsId);
+				News landNews = new News("land", url, title, newsId, newsId, "");
 				landNewsList.add(landNews);
 			}
 		} catch (Exception e) {

@@ -11,5 +11,5 @@ package com.example.newspipeline.domain;
  * ======================================================
  * 2023-11-06			jhchoi				최초 생성
  */
-public record News(String type, String url, String title, Long newsId) {
+public record News(String type, String url, String title, Long newsId, Long newsDate, String summary) {
 }

@@ -1,6 +1,6 @@
 crawling:
-  econews: 뉴스URL(편집하세요)
-  landnews: 뉴스URL(편집하세요)
+  econews: https://news.daum.net/breakingnews/economic
+  landnews: https://realestate.daum.net/news/all
 
 # Spring Cloud Kafka Streams 설정
 spring.cloud:
@@ -26,7 +26,7 @@ spring.cloud:
                 deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
       binder:
         brokers:
-          - localhost:9092
+          - localhost:29092
 
 spring:
   batch:
@@ -44,4 +44,3 @@ spring:
       username: root
       password: root
       database: news
-
